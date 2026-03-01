@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "SmartTasks",
+    "slug": "smarttasks",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "smarttasks",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#0d47a1"
+      },
+      "package": "com.knight101.smarttasks"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "dadc0228-010d-45c9-934f-c314dcd3409b"
+      }
+    }
+  }
+}
