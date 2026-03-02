@@ -1,9 +1,8 @@
-# SmartTasks – Mobile Task Manager (Frontend)
+# SmartTasks – Mobile Application (Frontend)
 
-SmartTasks is a mobile task management application built using React Native and Expo.  
-This repository contains the **frontend** of the SmartTasks full-stack project.
+This folder contains the React Native (Expo) mobile application for SmartTasks.
 
-The application connects to a Node.js + Express backend API for authentication and task management.
+The app communicates with the backend REST API for authentication and task operations.
 
 ---
 
@@ -11,13 +10,12 @@ The application connects to a Node.js + Express backend API for authentication a
 
 - User Registration
 - User Login (JWT Authentication)
-- Protected Navigation
 - Create Task
 - View Tasks
 - Update Task Status
 - Delete Task
 - Search Tasks
-- Filter by Status (Pending, In Progress, Completed)
+- Filter by Status
 - Logout
 - Secure token storage using AsyncStorage
 
@@ -28,83 +26,58 @@ The application connects to a Node.js + Express backend API for authentication a
 - React Native
 - Expo
 - Expo Router
+- TypeScript
 - Axios
 - AsyncStorage
-- TypeScript
 
 ---
 
-## 📂 Project Structure
+## 🚀 Running the App
+
+Navigate to frontend folder:
 
 ```
-frontend/
-├── app/
-│   ├── login.tsx
-│   ├── register.tsx
-│   ├── tasks.tsx
-│   ├── create-task.tsx
-│   ├── profile.tsx
-│   └── index.tsx
-│
-├── src/
-│   ├── components/
-│   ├── context/
-│   ├── services/
-│   ├── types/
-│   └── config/
-│
-├── assets/
-└── app.json
+cd frontend
 ```
 
----
+Install dependencies:
 
-## 🚀 Running the Frontend Locally
-
-1️⃣ Install dependencies:
-
-```bash
+```
 npm install
 ```
 
-2️⃣ Start the application:
+Start the app:
 
-```bash
+```
 npx expo start
 ```
 
-3️⃣ Open the app using:
+Use:
 - Expo Go (Android/iOS)
 - Android Emulator
 - iOS Simulator
 
 ---
 
-## 🔗 Backend Requirement
+## 🔗 Backend Configuration
 
-The backend server must be running for authentication and task operations to work.
-
-Make sure the base URL inside:
+Ensure the API base URL inside:
 
 ```
 src/config/api.ts
 ```
 
-points to your backend server.
-
-Example:
+points to:
 
 ```
-http://localhost:5000/api
+https://smart-task-manager-backend-gfx6.onrender.com/api
 ```
 
 ---
 
-## 🎯 Learning Outcomes
+## 🎯 Implementation Highlights
 
-- Implemented JWT authentication flow
-- Built protected navigation using Expo Router
-- Structured scalable React Native project
-- Created reusable UI components
-- Integrated frontend with REST API backend
-- Managed global authentication state using Context API
+- Context API for authentication state management
+- File-based routing using Expo Router
+- Axios interceptor for automatic token injection
+- Modular component structure

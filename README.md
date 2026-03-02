@@ -1,30 +1,27 @@
-# 📱 SmartTasks App – Full Stack Task Management System
+# 📱 SmartTasks – Full Stack Task Management Application
 
-SmartTasks is a full-stack mobile task management application developed using React Native (Expo) for the frontend and Node.js with MongoDB for the backend.
+SmartTasks is a full-stack mobile task management system built using React Native (Expo) for the frontend and Node.js with MongoDB for the backend.
 
-The project demonstrates secure authentication, RESTful API integration, user-specific data isolation, and Android APK deployment as part of a Software Engineering academic submission.
+This project demonstrates secure authentication, RESTful API development, protected routes, user-level data isolation, and Android APK deployment as part of a Software Engineering academic submission.
 
 ---
 
-## 📌 Project Description
+## 📌 Overview
 
-SmartTasks allows registered users to manage their personal tasks securely.
+SmartTasks enables users to:
 
-Each user can:
-
-- Create tasks
-- Update task status
-- Delete tasks
+- Register and log in securely using JWT authentication
+- Create, update, and delete personal tasks
+- Filter tasks by status (Pending, In Progress, Completed)
 - Search tasks by title
-- Filter tasks by status
 - Access only their own task data
-- Log in and log out securely
+- Log out securely
 
-All task operations are protected using JWT authentication.
+All API endpoints are protected and validated on the backend.
 
 ---
 
-## 🏗 Application Architecture
+## 🏗 System Architecture
 
 ```
 Mobile App (React Native + Expo)
@@ -34,17 +31,16 @@ REST API (Node.js + Express)
 MongoDB Database
 ```
 
-- The mobile application communicates with the backend using HTTP requests.
-- JWT is used for stateless authentication.
-- MongoDB stores users and tasks.
-- Backend routes are protected using middleware.
-- Task ownership validation ensures security.
+- The frontend communicates with the backend using REST APIs.
+- JWT ensures stateless authentication.
+- MongoDB stores user and task data.
+- Ownership validation prevents unauthorized access.
 
 ---
 
 ## 🛠 Technology Stack
 
-### Frontend (Mobile Application)
+### Frontend
 - React Native
 - Expo
 - Expo Router
@@ -52,7 +48,7 @@ MongoDB Database
 - Axios
 - AsyncStorage
 
-### Backend (API Server)
+### Backend
 - Node.js
 - Express.js
 - MongoDB
@@ -68,22 +64,9 @@ MongoDB Database
 ```
 SmartTasks_App/
 │
-├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── config/
-│   ├── app.js
-│   └── server.js
-│
-├── frontend/
-│   ├── app/
-│   ├── src/
-│   ├── assets/
-│   └── app.json
-│
-└── README.md
+├── backend/        → REST API (Node.js + Express)
+├── frontend/       → Mobile Application (Expo)
+└── README.md       → Project Overview
 ```
 
 ---
@@ -92,11 +75,9 @@ SmartTasks_App/
 
 The backend API is deployed on Render.
 
-Production API Base URL:
+Production Base URL:
 
 https://smart-task-manager-backend-gfx6.onrender.com/api
-
-The mobile application connects directly to this deployed API.
 
 ---
 
@@ -106,17 +87,11 @@ Download the latest Android build below:
 
 👉 [Download SmartTasks APK](https://github.com/surya-debnath1/SmartTasks-App/releases/download/v1.0.0/SmartTasks.apk)
 
-After downloading:
-
-1. Enable installation from unknown sources (if required).
-2. Install the APK on your Android device.
-3. Open the application and test all features.
-
 ---
 
 ## 🚀 Running Locally
 
-### Backend Setup
+### Backend
 
 ```
 cd backend
@@ -124,7 +99,7 @@ npm install
 npm run dev
 ```
 
-Create a `.env` file inside backend:
+Create a `.env` file inside `backend/`:
 
 ```
 MONGO_URI=your_mongodb_connection_string
@@ -134,7 +109,7 @@ PORT=5000
 
 ---
 
-### Frontend Setup
+### Frontend
 
 ```
 cd frontend
@@ -142,46 +117,42 @@ npm install
 npx expo start
 ```
 
-Use Expo Go to test on a physical device.
+Scan QR code using Expo Go.
 
 ---
 
-## 📦 Building Android APK
-
-The APK is generated using Expo Application Services (EAS):
+## 📦 APK Build Command
 
 ```
 eas build -p android --profile preview
 ```
 
-After build completion:
-- Download the `.apk`
+After build:
+- Download APK
 - Upload to GitHub Releases
-- Update the APK link above
+- Update link above
 
 ---
 
-## 🔐 Security Implementation
+## 🔐 Security Highlights
 
-- Password hashing using bcrypt
+- Password hashing with bcrypt
 - JWT-based authentication
 - Protected API routes
 - Ownership validation for tasks
-- Environment variables for sensitive credentials
-- MongoDB schema validation
+- Environment variable configuration
 
 ---
 
-## 🎓 Academic Objective
+## 🎓 Academic Context
 
-This project was developed to demonstrate:
+Developed as part of a Software Engineering academic assessment to demonstrate:
 
 - REST API design
-- Secure authentication implementation
-- MVC backend architecture
-- Database modeling
-- State management in React Native
-- Mobile UI development
+- Secure authentication flow
+- MVC backend structure
+- Database schema modeling
+- Mobile UI implementation
 - Deployment process
 
 ---

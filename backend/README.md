@@ -1,6 +1,12 @@
-# Smart Task Manager - Backend
+# SmartTasks – Backend API
 
-## Tech Stack
+This folder contains the REST API server for the SmartTasks application.
+
+The backend is responsible for authentication, task management, and secure database operations.
+
+---
+
+## 🛠 Tech Stack
 
 - Node.js
 - Express.js
@@ -8,47 +14,25 @@
 - Mongoose
 - JWT Authentication
 - bcryptjs
+- CORS
 
 ---
 
-## Features
+## 🚀 Installation
 
-- User Registration
-- User Login with JWT Authentication
-- Protected Routes
-- Task CRUD (Create, Read, Update, Delete)
-- Task Filtering by Status
-- Task Search by Title
-- Ownership Authorization
-- Clean MVC Structure
-
----
-
-## Project Structure
+Navigate to the backend folder:
 
 ```
-src/
-├── controllers/
-├── routes/
-├── models/
-├── middleware/
-├── config/
-└── app.js
+cd backend
 ```
 
----
-
-## Installation
-
-1. Clone the repository
-2. Navigate to backend folder
-3. Install dependencies:
+Install dependencies:
 
 ```
 npm install
 ```
 
-4. Create a `.env` file in the root directory:
+Create a `.env` file:
 
 ```
 MONGO_URI=your_mongodb_connection_string
@@ -56,7 +40,7 @@ JWT_SECRET=your_secret_key
 PORT=5000
 ```
 
-5. Start the server:
+Start the server:
 
 ```
 npm run dev
@@ -70,7 +54,7 @@ http://localhost:5000
 
 ---
 
-## API Endpoints
+## 🔐 API Endpoints
 
 ### Authentication
 
@@ -88,13 +72,13 @@ http://localhost:5000
 Supports:
 
 - Filtering: `/api/tasks?status=Completed`
-- Search: `/api/tasks?search=backend`
+- Search: `/api/tasks?search=keyword`
 
 ---
 
-## Security
+## 🔒 Security Features
 
 - Password hashing using bcrypt
-- JWT-based authentication
-- Route protection middleware
+- JWT-based route protection
 - Ownership validation for task updates/deletes
+- Schema validation using Mongoose
